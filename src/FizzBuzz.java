@@ -39,4 +39,12 @@ public class FizzBuzz {
         in.close(); // close the scanner object 
         return out;
     }
+
+    private static boolean checkInput(int i){
+            if (i < 0) {
+                return false;
+            } else {
+                return true;
+            }
+    }
 }
