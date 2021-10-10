@@ -33,8 +33,8 @@ public class FizzBuzz {
         int out;
         
         Scanner in = new Scanner(System.in); // initialise the scanner
-        System.out.println("How many digits do we want to play to?");
-        out = in.nextInt();
+        System.out.println("How many digits do we want to play to?"); // request a number from the user
+        out = in.nextInt(); // read in the next integer
 
         in.close(); // close the scanner object 
         return out;
