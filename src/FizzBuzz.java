@@ -10,9 +10,7 @@ public class FizzBuzz {
     public static void main(String[] args) {
         
         StringBuilder str = new StringBuilder(); // initialise the string  builder
-        Scanner in = new Scanner(System.in); // initialise the scanner
-        System.out.println("How many digits do we want to play to?");
-        int limit = in.nextInt(); // read in the 
+        int limit = getInput(); // read in the numner to play to 
 
         for (int i = 0; i <= limit; i++) {
             str.setLength(0); // clear the string
@@ -29,5 +27,15 @@ public class FizzBuzz {
             System.out.println(str);
         }
         
+    }
+
+    private static int getInput(){
+        int out;
+        
+        Scanner in = new Scanner(System.in); // initialise the scanner
+        System.out.println("How many digits do we want to play to?");
+        out = in.nextInt();
+
+        return out;
     }
 }
