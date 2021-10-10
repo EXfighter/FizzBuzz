@@ -13,7 +13,8 @@ public class FizzBuzz {
     public static void main(String[] args) {
         
         StringBuilder str = new StringBuilder(); // initialise the string  builder
-        int limit = getInput(); // read in the numner to play to 
+        FizzBuzz game1 = new FizzBuzz();
+        int limit = game1.getInput(); // read in the numner to play to 
 
         for (int i = 0; i <= limit; i++) {
             str.setLength(0); // clear the string
@@ -32,7 +33,7 @@ public class FizzBuzz {
         
     }
 
-    private static int getInput(){
+    private int getInput(){
         int out;
         
         Scanner in = new Scanner(System.in); // initialise the scanner
@@ -43,7 +44,7 @@ public class FizzBuzz {
         return out;
     }
 
-    private static boolean checkInput(int i){
+    private void checkInput(int i){
             if (i < 0) {
                 return false;
             } else {
