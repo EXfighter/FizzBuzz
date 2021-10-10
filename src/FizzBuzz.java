@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
@@ -37,8 +38,28 @@ public class FizzBuzz {
         int out;
         
         Scanner in = new Scanner(System.in); // initialise the scanner
-        System.out.println("How many digits do we want to play to?"); // request a number from the user
-        out = in.nextInt(); // read in the next integer
+        while (true) {
+            System.out.println("How many digits do we want to play to?"); // request a number from the user
+
+            try {
+                out = in.nextInt(); // read in the next integer
+            } catch (InputMismatchException exc) {
+                //TODO: handle exception
+                System.out.println(exc + ": Value must be an Integer.");
+                in.nextLine();
+                continue;
+            }
+
+            try {
+                checkInput(out);
+                break;
+            } catch (Exception exc) {
+                //TODO: handle exception
+                System.out.println(exc);
+                continue;
+            }
+            
+        }
 
         in.close(); // close the scanner object 
         return out;
@@ -46,9 +67,7 @@ public class FizzBuzz {
 
     private void checkInput(int i){
             if (i < 0) {
-                return false;
-            } else {
-                return true;
-            }
+                throw new IllegalArgumentException("Value must be non-negative.");
+            } 
     }
 }
