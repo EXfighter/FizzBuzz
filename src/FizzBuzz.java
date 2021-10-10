@@ -36,6 +36,7 @@ public class FizzBuzz {
         System.out.println("How many digits do we want to play to?");
         out = in.nextInt();
 
+        in.close(); // close the scanner object 
         return out;
     }
 }
