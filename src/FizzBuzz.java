@@ -7,6 +7,9 @@ A java impementation of the game fizzbuzz
 
 public class FizzBuzz {
     
+    public FizzBuzz(){
+
+    }
     public static void main(String[] args) {
         
         StringBuilder str = new StringBuilder(); // initialise the string  builder
