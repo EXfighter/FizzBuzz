@@ -17,7 +17,7 @@ public class FizzBuzz {
         FizzBuzz game1 = new FizzBuzz();
         int limit = game1.getInput(); // read in the numner to play to 
 
-        for (int i = 0; i <= limit; i++) {
+        for (int i = 1; i <= limit; i++) {
             str.setLength(0); // clear the string
 
             if (i % 3 == 0) {
