@@ -1,6 +1,6 @@
 userInput = int( input("How many number do you want to play to: "))
 
-for i in range(userInput+1):
+for i in range(1,userInput+1):
     out = ""
     if i % 3 == 0:
         out +="Fizz"
